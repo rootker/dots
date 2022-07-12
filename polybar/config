@@ -1,0 +1,320 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+background = ${xrdb:background}
+;foreground = #676b73 
+foreground = ${xrdb:foreground}
+
+color0 = ${xrdb:color0}
+color1 = ${xrdb:color1}
+color2 = ${xrdb:color2}
+color3 = ${xrdb:color3}
+color4 = ${xrdb:color4}
+color5 = ${xrdb:color5}
+color6 = ${xrdb:color6}
+color7 = ${xrdb:color7}
+color8 = ${xrdb:color8}
+color9 = ${xrdb:color9}
+color10 = ${xrdb:color10}
+color11 = ${xrdb:color11}
+color12 = ${xrdb:color12}
+color13 = ${xrdb:color13}
+color14 = ${xrdb:color14}
+color15 = ${xrdb:color15}
+dark-light = #272A2B 
+active-light = #313435
+
+[bar/example]
+tray-position = right
+width =  100%
+height = 20
+padding-left =1
+padding-right =0
+override-redirect = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+bottom = false
+enable-ipc = true
+fixed-center = true
+border-top-size = 5
+cursor-click = pointer
+border-bottom-size = 5
+border-top-color = ${colors.background}
+border-bottom-color = ${colors.background}
+
+line-size = 1
+wm-restack = i3
+
+modules-left = round-left i3 round-right empty-space  round-left polywins round-right
+modules-center =  
+modules-right = alsa round-left cpu round-right wlan updates temperature backlight battery round-left time  round-right  powermenu
+font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3
+font-1 = JetBrainsMono Nerd Font:size=14;4
+font-2 = Material Design Icons:style=Bold:size=9;3
+font-3 = unifont:fontformat=truetype:size=9;3
+
+
+[module/polywins]
+type = custom/script
+exec = ~/.config/polybar/scripts/polywins.sh 2>/dev/null
+format = <label>
+format-background = #2a2e36
+label = %output%
+label-padding = 0
+tail = true
+
+[module/empty-space]
+type = custom/text
+content = "  "
+
+[module/round-left]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = #2a2e36
+
+[module/round-right]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = #2a2e36
+
+[module/roundd-left]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = #a3be8c 
+
+[module/roundd-right]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = #a3be8c
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 70
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+format-padding = 1
+label = %temperature%
+label-warn = %temperature%
+ramp-0 =  "󰜗" 
+ramp-font = 3
+ramp-foreground = #a4ebf3
+
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+strip-wsnumbers = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+format-background = #2a2e36
+format-foreground = #82868e
+
+label-mode-padding = 0
+label-mode-foreground = #000
+label-mode-background = #2a2e36
+
+; focused = Active workspace on focused monitor
+label-focused = %name%
+label-focused-background = #2a2e36
+label-focused-foreground = #61afef
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name%
+label-unfocused-foreground = #82868e
+label-unfocused-background = #2a2e36
+label-unfocused-padding = 1
+
+; visible = Active workspace on unfocused monitor
+label-visible = %name%
+label-visible-background = #2a2e36
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%
+label-urgent-background = ${colors.foreground}
+label-urgent-padding = 1
+
+
+[module/alsa]
+type = internal/alsa
+format-volume = <label-volume> <bar-volume>
+label-volume = " "  
+label-volume-foreground = ${colors.foreground}
+format-muted-foreground = ${colors.foreground}
+label-muted = 󰚙
+
+format-muted-padding = 1
+
+bar-volume-width = 7
+bar-volume-foreground-0 = #61afef
+bar-volume-foreground-1 = #61afef
+bar-volume-foreground-2 = #61afef
+bar-volume-foreground-3 = #61afef
+bar-volume-foreground-4 = #61afef
+bar-volume-foreground-5 = #61afef
+bar-volume-foreground-6 = #61afef
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-foreground = #61afef
+bar-volume-indicator-font = 2
+bar-volume-fill = -
+bar-volume-fill-foreground = #61afef
+bar-volume-fill-font = 2
+bar-volume-empty = -
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = #565c64
+format-volume-padding = 2
+
+[module/time]
+type = internal/date
+interval = 60
+
+format = <label>
+format-background = #2a2e36
+format-foreground = #82868e
+
+date = 󰥔 %H:%M%{F-}
+time-alt = 󰃭 %a, %b %d%{F-}
+
+label = %date%%time%
+
+[module/mem]
+type = custom/script
+exec = free -m | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+format = <label>
+format-prefix = "﬙ " 
+label = %output% MB
+label-padding = 1
+format-prefix-foreground = #d19a66
+
+[module/updates]
+type = custom/script
+exec = pacman -Qqu | wc -l 
+#exec = doas xbps-install -S > /dev/null 2>&1; xbps-updates
+format = <label>
+interval = 4600 
+label = "  %output%"
+label-padding = 2
+label-foreground = #BF616A
+click-left = exec termite -e "sudo pacman -Syyu" 
+
+[module/powermenu]
+type = custom/text 
+content =" " 
+content-padding = 2
+#click-left = doas zzz &
+click-left = systemctl suspend &
+content-foreground = #f25287
+
+[module/wlan]
+type = internal/network
+interface = wlan0 
+interval = 3.0
+format-connected =  <label-connected>
+label-connected = " 󰤪" 
+label-connected-foreground = #A3BE8C 
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+label-charging = %percentage%%
+format-charging-foreground = ${colors.color4}
+format-charging-background = ${colors.background}
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%%
+format-discharging-foreground = ${colors.foreground}
+format-discharging-background = ${colors.background}
+
+format-full-prefix = "  "
+format-full-prefix-foreground = #A0E8A2
+format-foreground = ${colors.color4}
+format-background = ${colors.background}
+
+label-discharging-foreground = ${colors.foreground}
+ramp-capacity-foreground =  #A0E8A2  
+label-charging-foreground = ${colors.foreground}
+
+label-padding = 1
+
+ramp-capacity-0 = "  " 
+ramp-capacity-1 = "  " 
+ramp-capacity-2 = "  " 
+ramp-capacity-3 = "  " 
+ramp-capacity-4 = "  "
+
+
+animation-charging-0 = "  " 
+animation-charging-1 = "  " 
+animation-charging-2 = "  " 
+animation-charging-3 = "  " 
+animation-charging-4 = "  "
+
+
+animation-charging-foreground = #DF8890
+animation-charging-framerate = 750
+
+format-charging-padding = 1
+format-discharging-padding = 1
+
+[module/volume]
+type = custom/script
+exec = amixer get Master | awk '$0~/%/{print $4}' | tr -d '[]'
+format = <label>
+internal = 5.0
+label = %output% 
+label-foreground = #BF616A
+label-padding = 1
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format = <label>
+format-prefix = "  "
+label = %percentage%
+format-prefix-foreground = #61afef
+label-foreground =   #D8DEE9
+format-padding = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 2.5
+
+format-prefix ="  " 
+format =  <label> 
+
+label = CPU %percentage%%
+format-background = #2a2e36
+format-foreground = #989cff
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...
+
