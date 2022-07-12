@@ -1,3 +1,3 @@
 #!/bin/bash
-rsync -arvAX --delete hc/* $HOME/.config/
-rsync -arvAX --delete hm/* $HOME/
+rsync -arvAX --delete ../hc/* $HOME/.config/
+rsync -arvAX --delete ../hm/* $HOME/
