@@ -256,10 +256,11 @@ bindsym $mod+Tab exec "setxkbmap es,ar -option caps:escape -option grp:shifts_to
 exec_always --no-startup-id "polybar-msg cmd restart"
 exec_always --no-startup-id "~/.local/bin/i3-layouts"
 #exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer 1800 'dm-tool lock' ''
-#exec --no-startup-id xautolock -corners 000- -time 5 -locker "dm-tool lock"
+exec --no-startup-id xautolock -corners 000- -time 5 -locker "dm-tool lock"
 #exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nitrogen --restore 
-exec --no-startup-id polybar example
+exec --no-startup-id setxkbmap es
+#exec --no-startup-id polybar example
 exec --no-startup-id picom -c --corner-radius 5  --experimental-backends 
 #exec --no-startup-id compton --config ~/.config/picom.conf
 #exec --no-startup-id redshift -x && redshift -O 4000k

@@ -1,4 +1,5 @@
 global
+    font = "Consolas 10"
     format = "<b>%s %p</b>\n%b"
     sort = yes
     indicate_hidden = true

@@ -95,7 +95,10 @@ set -o vi
 bind -m vi-insert "\C-l":clear-screen
 #bind -m vi-insert "\C-l":clear-screen # Control+L for clear-screen
 # Better TAB completion.
-bind 'TAB: menu-complete'
+#bind 'set show-all-if-ambiguous on'
+set show-all-if-ambiguous on
+bind 'TAB:menu-complete'
+#bind 'TAB: menu-complete'
 bind 'set colored-stats on'
 #bind 'set completion-display-width 1'
 bind 'set show-all-if-ambiguous on'
@@ -292,6 +295,11 @@ end_history() {
     log_history $?;
     echo "$(date '+%Y-%m-%d %H:%M:%S') $HOSTNAME:$$ $PWD (end)" >> $MYHISTFILE
 }
+#f5# Create temporary directory and \kbd{cd} to it
+function cdt () {
+    builtin cd "$(mktemp -d)"
+    builtin pwd
+}
 function wall() {
     lastdir="/home/$USER/.cache/Wall/"
     ca="$lastdir/.lastpath"
@@ -438,7 +446,7 @@ export LS_COLORS
 #source "$HOME/.cache/wal/colors.sh"
 # HSTR configuration - add this to ~/.bashrc
 #alias sydrop="encfs ~/Dropbox/ ~/Private;rsync -azP ~/.config/i3"
-alias rmc="rm -rif ~/.config/$1"
+alias mwin="mount -t cifs -o username=snake //192.168.1.13/Users /mnt/myshare" 
 alias ker="cd ~/gits/rootker/"
 alias s='sudo '
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
