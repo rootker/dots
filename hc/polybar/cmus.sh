@@ -2,15 +2,15 @@
 
 case "$1" in
     --toggle)
-        if cmus-remote -Q | grep -q 'status playing'; then
-            cmus-remote -u
+        if mpc | grep -q 'status playing'; then
+           mpc play 
         else
-            cmus-remote -p
+          mpc pause 
         fi
         ;;
     *)
-        if cmus-remote -Q | grep -q 'status playing'; then
-		output=`cmus-remote -Q | grep 'title' | awk '{$1=""; $2=""; print $0}' | cut -c 3-`
+        if mpc >/dev/null | head -1; then
+		output=`mpc | head -1  | awk '{$1=""; $2=""; print $0}' |cut -c 3-`
 		if ((${#output} > 21)); then
 			echo ${output:0:21}"..."
 		else

@@ -1,11 +1,17 @@
 # It will not be overwritten, so edit it as you like.
-default_border pixel 0
+default_border pixel 5
 set $mod Mod4
 floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id termite 
 font pango:monospace 8
 set $i3lx "/home/moux/.local/bin/i3l"
 
+client.focused          #262626 #262626 #ffffff #dddddd   #262626
+client.focused_inactive #262626 #262626 #86888c #292d2e   #262626 
+client.unfocused        #212121 #212121 #86888c #292d2e   #5a5a5a
+client.urgent           #d64e4e #d64e4e #ffffff #d64e4e   #d64e4e
+client.placeholder      #212121 #0c0c0c #ffffff #212121   #262626
+client.background       #212121
 
 # layouts
 bindsym $mod+Shift+s layout stacking
@@ -28,7 +34,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 bindsym $mod+Shift+D exec --no-startup-id ~/bin/ytfzf -mD
 # start a terminal
-bindsym $mod+p exec --no-startup-id rofi -show run 
+bindsym $mod+p exec --no-startup-id rofi -show run -theme launcher 
 #bindsym $mod+p exec --no-startup-id DRI_PRIME=1 /home/smoke/stuff/kk/rofi/bin/launcher
 # screencast
 bindsym $mod+Control+5 exec mpv $AUDIO && dunstify -u CRIT "on air" -t 800 && ffmpeg -f x11grab -s 1366x768 -i :0.0 $HOME/$(date +"%d_%m_%Y_%I_%M").mp4
@@ -142,12 +148,6 @@ for_window [class="Sxiv"] floating enable
 for_window [class="Tint2"] floating enable
 for_window [class="Termite"] floating enable
 for_window [class="Kitty"] floating enable
-client.focused          #2b83a6 #2b83a6 #ffffff #dddddd   #2b83a6
-client.focused_inactive #212121 #212121 #86888c #292d2e   #5a5a5a
-client.unfocused        #212121 #212121 #86888c #292d2e   #5a5a5a
-client.urgent           #d64e4e #d64e4e #ffffff #d64e4e   #d64e4e
-client.placeholder      #212121 #0c0c0c #ffffff #212121   #262626
-client.background       #212121
 #bindsym $mod+1 workspace number $ws1
 #bindsym $mod+2 workspace number $ws2
 #bindsym $mod+3 workspace number $ws3
@@ -235,7 +235,7 @@ set $i3l 2columns right to workspace $ws5
 set $i3l companion 0.3 0.4 up to workspace $ws6
 set $i3l autosplit to workspace $ws7
 # The border
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 client.background #2B2C2B
 ############# GAPS ###############################
 hide_edge_borders smart_no_gaps

@@ -308,3 +308,364 @@ Jul 06 04:35 : player: played "Mahmoud Al-Turky - Ta3alo Shufou 7aly.mp3"
 Jul 06 04:43 : player: played "Ouled El Bahdja - Wlid El Virage.mp3"
 Jul 06 05:07 : player: played "Abdou Driassa - Balak.mp3"
 Jul 06 13:50 : player: played "Abdou Driassa - Balak.mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/Cheb Rezki - Rabi Farajha.mp3; Failed to open '/home/seo/music/Cheb Rezki - Rabi Farajha.mp3': No such file or directory
+Jul 14 06:31 : player: played "Cheb Rezki - Rabi Farajha.mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/Cheb Rezki - Rabi Farajha.mp3; Failed to open '/home/seo/music/Cheb Rezki - Rabi Farajha.mp3': No such file or directory
+Jul 14 06:31 : player: played "Cheb Rezki - Rabi Farajha.mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/Ultras Siempre Paloma 2006 - Wlad Lyouma.mp3; Failed to open '/home/seo/music/Ultras Siempre Paloma 2006 - Wlad Lyouma.mp3': No such file or directory
+Jul 14 06:31 : player: played "Ultras Siempre Paloma 2006 - Wlad Lyouma.mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/T-Pain - T-Pain Mashup (with Kurt Hugo Schneider).mp3; Failed to open '/home/seo/music/T-Pain - T-Pain Mashup (with Kurt Hugo Schneider).mp3': No such file or directory
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/Blanco Palamera - Sola Con Mi Voz.mp3; Failed to open '/home/seo/music/Blanco Palamera - Sola Con Mi Voz.mp3': No such file or directory
+Jul 14 06:31 : player: played "T-Pain - T-Pain Mashup (with Kurt Hugo Schneider).mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/Blanco Palamera - Sola Con Mi Voz.mp3; Failed to open '/home/seo/music/Blanco Palamera - Sola Con Mi Voz.mp3': No such file or directory
+Jul 14 06:31 : player: played "Blanco Palamera - Sola Con Mi Voz.mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/Future - Mask Off.mp3; Failed to open '/home/seo/music/Future - Mask Off.mp3': No such file or directory
+Jul 14 06:31 : player: played "Future - Mask Off.mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/Travis Scott - goosebumps.mp3; Failed to open '/home/seo/music/Travis Scott - goosebumps.mp3': No such file or directory
+Jul 14 06:31 : player: played "Travis Scott - goosebumps.mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/7-Toun - Cobra.mp3; Failed to open '/home/seo/music/7-Toun - Cobra.mp3': No such file or directory
+Jul 14 06:31 : player: played "7-Toun - Cobra.mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/Pop Smoke - Invincible.mp3; Failed to open '/home/seo/music/Pop Smoke - Invincible.mp3': No such file or directory
+Jul 14 06:31 : player: played "Pop Smoke - Invincible.mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/ElGrandeToto - Haram (Pablo II).mp3; Failed to open '/home/seo/music/ElGrandeToto - Haram (Pablo II).mp3': No such file or directory
+Jul 14 06:31 : player: played "ElGrandeToto - Haram (Pablo II).mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/Ouled El Bahdja - Wqate 3ssiba.mp3; Failed to open '/home/seo/music/Ouled El Bahdja - Wqate 3ssiba.mp3': No such file or directory
+Jul 14 06:31 : player: played "Ouled El Bahdja - Wqate 3ssiba.mp3"
+Jul 14 06:31 : exception: Failed to decode /home/seo/music/Ultras Siempre Paloma 2006 - Saniat Rmel De Nuestra Ciudad.mp3; Failed to open '/home/seo/music/Ultras Siempre Paloma 2006 - Saniat Rmel De Nuestra Ciudad.mp3': No such file or directory
+Jul 14 06:31 : player: played "Ultras Siempre Paloma 2006 - Saniat Rmel De Nuestra Ciudad.mp3"
+Jul 14 06:32 : update: removing old/اغنية ميماتي باش الشهيرة _ Gürkan Uygun - Bu Şehir Girdap Gülüm.mp3
+Jul 14 06:32 : update: removing old/The Last of Us 2 - Ellie 'Take on Me' Cover Song.mp3
+Jul 14 06:32 : update: removing old/Şiire Gazele.mp3
+Jul 14 06:32 : update: removing old/Romanci 7ta waleftek  (Lyrics).mp3
+Jul 14 06:32 : update: removing old/ROMANCI   Kont Nabghik Ya7asra 2013 FoOr Bzf Dj-Belalia.mp3
+Jul 14 06:32 : update: removing old/Red Dead Redemption 2 Soundtrack - May I  Stand Unshaken Full Version.mp3
+Jul 14 06:32 : update: removing old/Pearl Jam - Future Days.mp3
+Jul 14 06:32 : update: removing old/Nouaman Belaiachi - L'MADI (EXCLUSIVE Music Video) _ (نعمان بلعياشي - الماضي (فيديو كليب حصري.mp3
+Jul 14 06:32 : update: removing old/Nouaman Belaiachi - Kdeb (Official Audio) _ (نعمان بلعياشي - كذب (حصريا.mp3
+Jul 14 06:32 : update: removing old/Mor Karbasi - Judia (מור קרבסי) Türkçe Çeviri.mp3
+Jul 14 06:32 : update: removing old/Mc Khalid 9bal man3arfak.mp3
+Jul 14 06:32 : update: removing old/L'epopée Rachid Baba _ Cheb Anouar # Choufou el Hali #.mp3
+Jul 14 06:32 : update: removing old/Ghalia Benali_ YA MSAFER _ غالية بنعلي_ يا مسافر وحدك.mp3
+Jul 14 06:32 : update: removing old/Evgeny Grinko - Jane Maryam - long version.mp3
+Jul 14 06:32 : update: removing old/Erore - Alah Ykémélk Bélkher (Audio) _ إرور - الله يكمل بالخير - Allah seni hayırla tamamlasın 🇹🇷🇲🇦.mp3
+Jul 14 06:32 : update: removing old/Emel Mathlouthi - Ma Lkit Official Video.mp3
+Jul 14 06:32 : update: removing old/D'Kover - Amine Semma - Darja Darja (Cheb Bilal) - درجة درجة (الشاب بلال).mp3
+Jul 14 06:32 : update: removing old/Cengiz Özkan - Bir Ay Doğar İlk Akşamdan Geceden [ Çukur Dizi Şarkısı © Kalan Müzik ].mp3
+Jul 14 06:32 : update: removing old/Ashley Johnson - True Faith _ The Last of Us Part II .mp3
+Jul 14 06:32 : update: removing OUENZA - a7lam.mp3
+Jul 14 06:32 : update: removing Draganov - 9arbili.mp3
+Jul 14 06:32 : update: removing Ouled El Bahdja - 5 juillet.mp3
+Jul 14 06:32 : update: removing XXXTENTACION - Fuck Love.mp3
+Jul 14 06:32 : update: removing XXXTENTACION - Save Me.mp3
+Jul 14 06:32 : update: removing XXXTENTACION - Revenge.mp3
+Jul 14 06:32 : update: removing XXXTENTACION - Jocelyn Flores.mp3
+Jul 14 06:32 : update: removing D33pSoul - Alabas.mp3
+Jul 14 06:32 : update: removing Habib Belk - Aicha.mp3
+Jul 14 06:32 : update: removing Snor - ACDC.mp3
+Jul 14 06:32 : update: removing Elissa - Ajmal Ihssas.mp3
+Jul 14 06:32 : update: removing Elissa - Aayshalak.mp3
+Jul 14 06:32 : update: removing Zucchero - Cosi' Celeste (Album Version).mp3
+Jul 14 06:32 : update: removing Mishlawi - All Night.mp3
+Jul 14 06:32 : update: removing Balti - Allo.mp3
+Jul 14 06:32 : update: removing Fat Joe - All The Way Up.mp3
+Jul 14 06:32 : update: removing Douki - Amour impossible.mp3
+Jul 14 06:32 : update: removing Cheb Rezki - Rabi Farajha.mp3
+Jul 14 06:32 : update: removing Cheb Rezki - Taleb El Jwar.mp3
+Jul 14 06:32 : update: removing Duncan Laurence - Arcade.mp3
+Jul 14 06:32 : update: removing Raid - Sommaire (feat. l'Morphine).mp3
+Jul 14 06:32 : update: removing Muhammad Abdul Jabbar - Asjal Ruwhi.mp3
+Jul 14 06:32 : update: removing EBROW - Asjal Ruwhi (Remix).mp3
+Jul 14 06:32 : update: removing Travis Scott - SICKO MODE.mp3
+Jul 14 06:32 : update: removing Travis Scott - YOSEMITE.mp3
+Jul 14 06:32 : update: removing Travis Scott - BUTTERFLY EFFECT.mp3
+Jul 14 06:32 : update: removing Cheb Nasro - Atak Rabi Blasa Fi Galbi.mp3
+Jul 14 06:32 : update: removing L'morphine - Ay9ona.mp3
+Jul 14 06:32 : update: removing Ouled El Bahdja - Babour Ellouh.mp3
+Jul 14 06:32 : update: removing French Montana - Bad B_tch.mp3
+Jul 14 06:32 : update: removing Flenn - Balak.mp3
+Jul 14 06:32 : update: removing Mouh Milano - Balek.mp3
+Jul 14 06:32 : update: removing Joji - SLOW DANCING IN THE DARK.mp3
+Jul 14 06:32 : update: removing Draganov - BEAU-COUP.mp3
+Jul 14 06:32 : update: removing Post Malone - rockstar.mp3
+Jul 14 06:32 : update: removing Kadim Al Sahir - Ahibini Bala Ukad.mp3
+Jul 14 06:32 : update: removing Kadim Al Sahir - Fi Madrasat Al Hob.mp3
+Jul 14 06:32 : update: removing Saber Chaib - Bghito Tchofouna Tay7ine.mp3
+Jul 14 06:32 : update: removing Özgür Yedievli - Bir İzim Kalsın.mp3
+Jul 14 06:32 : update: removing Özgür Yedievli - Tutmayın Beni.mp3
+Jul 14 06:32 : update: removing Özgür Yedievli - Ümit Çiçekleri (Elveda).mp3
+Jul 14 06:32 : update: removing Travis Scott - goosebumps.mp3
+Jul 14 06:32 : update: removing Habib Belk - Bouhali.mp3
+Jul 14 06:32 : update: removing Sting - Desert Rose.mp3
+Jul 14 06:32 : update: removing Kizz Daniel - Buga (Lo Lo Lo).mp3
+Jul 14 06:32 : update: removing Rema - Calm Down.mp3
+Jul 14 06:32 : update: removing ElGrandeToto - Bent Nass.mp3
+Jul 14 06:32 : update: removing Draganov - Capable.mp3
+Jul 14 06:32 : update: removing Abdeelgha4 - Cava.mp3
+Jul 14 06:32 : update: removing CHAOS333 - Ch7al men wa7ed.mp3
+Jul 14 06:32 : update: removing Cheb Nasro - N'direk amour.mp3
+Jul 14 06:32 : update: removing Cheb Nasro - Zed Aadeb Gualbi.mp3
+Jul 14 06:32 : update: removing Joseph Attieh - Rayhin Aala Beitna.mp3
+Jul 14 06:32 : update: removing 7-Toun - Cobra.mp3
+Jul 14 06:32 : update: removing Draganov - Kssiriri.mp3
+Jul 14 06:32 : update: removing Draganov - Nounou.mp3
+Jul 14 06:32 : update: removing Rini - For Days.mp3
+Jul 14 06:32 : update: removing Snor - Darja.mp3
+Jul 14 06:32 : update: removing Dj Buraq - Darja Darja (feat. Amine Semma).mp3
+Jul 14 06:32 : update: removing Drake - Time Flies.mp3
+Jul 14 06:32 : update: removing SNOR 91 - Dawk Liya.mp3
+Jul 14 06:32 : update: removing Snor - De9a De9a.mp3
+Jul 14 06:32 : update: removing Khaled - Delali.mp3
+Jul 14 06:32 : update: removing Uzishettan - Delali.mp3
+Jul 14 06:32 : update: removing Reynmen - Derdim Olsun.mp3
+Jul 14 06:32 : update: removing Roffo - Dertha B'idi.mp3
+Jul 14 06:32 : update: removing Ninho - La vie qu'on mène.mp3
+Jul 14 06:32 : update: removing Cheb Bilal - Di Ayza Kalem.mp3
+Jul 14 06:32 : update: removing Tsew The Kid - Ôter.mp3
+Jul 14 06:32 : update: removing 24kGoldn - Empty (feat. Swae Lee).mp3
+Jul 14 06:32 : update: removing Ragheb Alama - El Hob El Kebir.mp3
+Jul 14 06:32 : update: removing Ragheb Alama - Nasini El Donya.mp3
+Jul 14 06:32 : update: removing El Far3i - Tghayarti.mp3
+Jul 14 06:32 : update: removing Ultras Siempre Paloma 2006 - Saniat Rmel De Nuestra Ciudad.mp3
+Jul 14 06:32 : update: removing Ultras Siempre Paloma 2006 - Wlad Lyouma.mp3
+Jul 14 06:32 : update: removing CKay - Emiliana.mp3
+Jul 14 06:32 : update: removing Enrique Iglesias - Hero.mp3
+Jul 14 06:32 : update: removing Lou Reed - Perfect Day.mp3
+Jul 14 06:32 : update: removing Ouled El Bahdja - Fi Hali Nssir.mp3
+Jul 14 06:32 : update: removing Cheb Amrou - Galbi adwiya.mp3
+Jul 14 06:32 : update: removing Yung Lean - Hennessy & Sailor Moon.mp3
+Jul 14 06:32 : update: removing Future - Mask Off.mp3
+Jul 14 06:32 : update: removing Kafon - Gabi Gabi.mp3
+Jul 14 06:32 : update: removing L'morphine - Python.mp3
+Jul 14 06:32 : update: removing L'morphine - Huis Clos.mp3
+Jul 14 06:32 : update: removing L'morphine - Sparadra.mp3
+Jul 14 06:32 : update: removing Draganov - Maak.mp3
+Jul 14 06:32 : update: removing Cheb Amrou - Kwatni.mp3
+Jul 14 06:32 : update: removing Marwa Loud - Ghir Ntiya.mp3
+Jul 14 06:32 : update: removing Berk Coşkun - Gizlerdim.mp3
+Jul 14 06:32 : update: removing Gavin Greenaway - Elysium.mp3
+Jul 14 06:32 : update: removing Lisa Gerrard - Now We Are Free.mp3
+Jul 14 06:32 : update: removing Enrique Iglesias - Escape.mp3
+Jul 14 06:32 : update: removing Enrique Iglesias - El Perdedor.mp3
+Jul 14 06:32 : update: removing Enrique Iglesias - Addicted.mp3
+Jul 14 06:32 : update: removing Enrique Iglesias - Somebody's Me.mp3
+Jul 14 06:32 : update: removing Sezen Aksu - Tutsak.mp3
+Jul 14 06:32 : update: removing Fayçal Azizi - Hak a Mama.mp3
+Jul 14 06:32 : update: removing T-Pain - 5 O'Clock (feat. Lily Allen & Wiz Khalifa).mp3
+Jul 14 06:32 : update: removing T-Pain - Can't Believe It (feat. Lil' Wayne).mp3
+Jul 14 06:32 : update: removing ElGrandeToto - Haram (Pablo II).mp3
+Jul 14 06:32 : update: removing Harry Styles - Meet Me in the Hallway.mp3
+Jul 14 06:32 : update: removing Harry Styles - Sign of the Times.mp3
+Jul 14 06:32 : update: removing Cheb Hasni - Baïda mon amour.mp3
+Jul 14 06:32 : update: removing Cheb Hasni - Ya ma.mp3
+Jul 14 06:32 : update: removing Cheb Hasni - Had zine.mp3
+Jul 14 06:32 : update: removing Cheb Hasni - Enfin lkit litfhamn.mp3
+Jul 14 06:32 : update: removing Raste - Hickey.mp3
+Jul 14 06:32 : update: removing Travis Scott - HIGHEST IN THE ROOM.mp3
+Jul 14 06:32 : update: removing Ultras Siempre Paloma 2006 - Himno del Moghreb Atlético Tetuán (feat. Moghreb Atlético Tetuán).mp3
+Jul 14 06:32 : update: removing Cheb Kader - Sid El Houari.mp3
+Jul 14 06:32 : update: removing Mishlawi - Homies.mp3
+Jul 14 06:32 : update: removing Justin Bieber - Honest.mp3
+Jul 14 06:32 : update: removing The Fray - Look After You.mp3
+Jul 14 06:32 : update: removing M83 - Wait.mp3
+Jul 14 06:32 : update: removing Shawn Mendes - Treat You Better.mp3
+Jul 14 06:32 : update: removing Lisa Gerrard - Elegy.mp3
+Jul 14 06:32 : update: removing Clairo - Sofia.mp3
+Jul 14 06:32 : update: removing Enrique Iglesias - Ring My Bells.mp3
+Jul 14 06:32 : update: removing Clams Casino - I'm God.mp3
+Jul 14 06:32 : update: removing Hans Zimmer - S.T.A.Y.mp3
+Jul 14 06:32 : update: removing Abdou Driassa - Balak.mp3
+Jul 14 06:32 : update: removing Stormy - Layli.mp3
+Jul 14 06:32 : update: removing Justin Bieber - Heartbreaker.mp3
+Jul 14 06:32 : update: removing French Montana - Unforgettable (feat. Swae Lee).mp3
+Jul 14 06:32 : update: removing French Montana - Famous.mp3
+Jul 14 06:32 : update: removing Fayçal Azizi - Warda Ala Warda.mp3
+Jul 14 06:32 : update: removing Fayçal Azizi - Kif Leme'ani.mp3
+Jul 14 06:32 : update: removing Snor - Kasseta.mp3
+Jul 14 06:32 : update: removing Cravata - Keddab.mp3
+Jul 14 06:32 : update: removing Cheb Simo - Makaynch Ghir Nti.mp3
+Jul 14 06:32 : update: removing Kadim Al Sahir - Eid al ashak.mp3
+Jul 14 06:32 : update: removing Yung Lean - Kyoto.mp3
+Jul 14 06:32 : update: removing Douki - L'amour de ma vie.mp3
+Jul 14 06:32 : update: removing Los Matadores 2005 - Weld l7amra.mp3
+Jul 14 06:32 : update: removing Los Matadores 2005 - Nbelagh slami.mp3
+Jul 14 06:32 : update: removing RedOne - La Moustahila.mp3
+Jul 14 06:32 : update: removing Lacrim - Kounti.mp3
+Jul 14 06:32 : update: removing Habib Belk - Lala Mira.mp3
+Jul 14 06:32 : update: removing Snor - Lalala.mp3
+Jul 14 06:32 : update: removing 7-Toun - Lappel.mp3
+Jul 14 06:32 : update: removing Yung Lean - Ginseng Strip 2002.mp3
+Jul 14 06:32 : update: removing Alec Benjamin - Let Me Down Slowly.mp3
+Jul 14 06:32 : update: removing Cheb Mami - Haoulou.mp3
+Jul 14 06:32 : update: removing Cheb Mami - Let Me Cry.mp3
+Jul 14 06:32 : update: removing Cheb Mami - Douha alia.mp3
+Jul 14 06:32 : update: removing Sofiane Pamart - SOLITUDE.mp3
+Jul 14 06:32 : update: removing Cheb Bilal - Li Bghana Nebghoh.mp3
+Jul 14 06:32 : update: removing Snor - Lgana.mp3
+Jul 14 06:32 : update: removing Nouamane Belaiachi - Lmadi.mp3
+Jul 14 06:32 : update: removing Justin Bieber - Lonely.mp3
+Jul 14 06:32 : update: removing Tom Odell - Another Love.mp3
+Jul 14 06:32 : update: removing XXXTENTACION - Look At Me!.mp3
+Jul 14 06:32 : update: removing CKay - love nwantiti (feat. ElGrande Toto) (North African Remix).mp3
+Jul 14 06:32 : update: removing Gafur - Luna.mp3
+Jul 14 06:32 : update: removing Tagne - MAAK.mp3
+Jul 14 06:32 : update: removing Mouh Milano - Machafouhach.mp3
+Jul 14 06:32 : update: removing Sami Yusuf - Madad (Nasimi Arabic Version).mp3
+Jul 14 06:32 : update: removing Farid Bang - Maghreb Gang (feat. French Montana & Khaled).mp3
+Jul 14 06:32 : update: removing OUENZA - Mario.mp3
+Jul 14 06:32 : update: removing Los Matadores 2005 - Amor mío.mp3
+Jul 14 06:32 : update: removing Joseph Attieh - Taab El Chawk.mp3
+Jul 14 06:32 : update: removing Max Jury - Numb.mp3
+Jul 14 06:32 : update: removing Max Jury - Great American Novel.mp3
+Jul 14 06:32 : update: removing Max Jury - Home.mp3
+Jul 14 06:32 : update: removing Mouh Milano - Mazalni Kima Bakri.mp3
+Jul 14 06:32 : update: removing Pop Smoke - Dior.mp3
+Jul 14 06:32 : update: removing Pop Smoke - Invincible.mp3
+Jul 14 06:32 : update: removing Pop Smoke - Get Back.mp3
+Jul 14 06:32 : update: removing Pop Smoke - Element.mp3
+Jul 14 06:32 : update: removing Cheb Mami - Rani maàk el youm.mp3
+Jul 14 06:32 : update: removing Cheb Bilal - Même pas appel.mp3
+Jul 14 06:32 : update: removing Kuritsumi Mitsumori - Mental Planet.mp3
+Jul 14 06:32 : update: removing Ultras Siempre Paloma 2006 - La Verdad.mp3
+Jul 14 06:32 : update: removing Michael Jackson - Beat It.mp3
+Jul 14 06:32 : update: removing M83 - Midnight City.mp3
+Jul 14 06:32 : update: removing El Far3i - Mirtaha.mp3
+Jul 14 06:32 : update: removing Mishlawi - Boohoo.mp3
+Jul 14 06:32 : update: removing Mishlawi - Ignore.mp3
+Jul 14 06:32 : update: removing Mishlawi - Limbo.mp3
+Jul 14 06:32 : update: removing D33pSoul - Moulay Hmed.mp3
+Jul 14 06:32 : update: removing نسرين بوكيدا - Moulay Hmed.mp3
+Jul 14 06:32 : update: removing Nirvana - The Man Who Sold The World.mp3
+Jul 14 06:32 : update: removing Gafur - Otpuskaju.mp3
+Jul 14 06:32 : update: removing Of Monsters and Men - Little Talks.mp3
+Jul 14 06:32 : update: removing Sami Yusuf - Hasbi Rabbi.mp3
+Jul 14 06:32 : update: removing Tagne - Nadi Canadi.mp3
+Jul 14 06:32 : update: removing Ouled El Bahdja - Nar El Hamra.mp3
+Jul 14 06:32 : update: removing Alec Benjamin - Water Fountain.mp3
+Jul 14 06:32 : update: removing JONY - Naverno, ty menya ne pomnish.mp3
+Jul 14 06:32 : update: removing Joji - Sanctuary.mp3
+Jul 14 06:32 : update: removing Iguidr - Nettat (Remix).mp3
+Jul 14 06:32 : update: removing Kafon - Nheb Ngala3.mp3
+Jul 14 06:32 : update: removing French Montana - No Stylist (feat. Drake).mp3
+Jul 14 06:32 : update: removing Elvis Prod - Nti Dori (feat. Youcef Gdh).mp3
+Jul 14 06:32 : update: removing Meta4 Planet - Paranoid.mp3
+Jul 14 06:32 : update: removing Meta4 Planet - Losing control.mp3
+Jul 14 06:32 : update: removing Meta4 Planet - How r u _.mp3
+Jul 14 06:32 : update: removing Meta4 Planet - Stupid cupid.mp3
+Jul 14 06:32 : update: removing Meta4 Planet - No new friend.mp3
+Jul 14 06:32 : update: removing Meta4 Planet - Mermaid datni l'darha.mp3
+Jul 14 06:32 : update: removing OUENZA - Ok wait (feat. ElGrandeToto).mp3
+Jul 14 06:32 : update: removing JEN - Omri Melitek.mp3
+Jul 14 06:32 : update: removing Ultras Siempre Paloma 2006 - Te Quiero Quiero Verte.mp3
+Jul 14 06:32 : update: removing Ultras Siempre Paloma 2006 - Pasado Yerja3 Mo7al.mp3
+Jul 14 06:32 : update: removing Ultras Siempre Paloma 2006 - Jina Min Kol 7awma.mp3
+Jul 14 06:32 : update: removing Lacrim - On l'a pas choisi.mp3
+Jul 14 06:32 : update: removing Lacrim - Tulum.mp3
+Jul 14 06:32 : update: removing CHAOS333 - Porfavor.mp3
+Jul 14 06:32 : update: removing Justin Bieber - Love Yourself.mp3
+Jul 14 06:32 : update: removing Lacrim - Gustavo Gaviria.mp3
+Jul 14 06:32 : update: removing Cheb Amrou - Mon mal persiste.mp3
+Jul 14 06:32 : update: removing Cheb Amrou - C'est toi que jaime.mp3
+Jul 14 06:32 : update: removing Cheb Amrou - J'étais tranquille.mp3
+Jul 14 06:32 : update: removing Cheb Amrou - Qui aurait pu prédire notre rencontre.mp3
+Jul 14 06:32 : update: removing Mishlawi - Rain.mp3
+Jul 14 06:32 : update: removing Ultras Siempre Paloma 2006 - Vamos Tetuán mi vida.mp3
+Jul 14 06:32 : update: removing T-Pain - Bang Bang Pow Pow (feat. Lil' Wayne).mp3
+Jul 14 06:32 : update: removing Reynmen - Radyoda Neşet.mp3
+Jul 14 06:32 : update: removing Reynmen - Leila.mp3
+Jul 14 06:32 : update: removing Reynmen - Yoksun Başımda.mp3
+Jul 14 06:32 : update: removing Reynmen - Hevesim Yok.mp3
+Jul 14 06:32 : update: removing Travis Scott - Nightcrawler (feat. Swae Lee & Chief Keef).mp3
+Jul 14 06:32 : update: removing Adham Nabulsi - Howeh el Hob.mp3
+Jul 14 06:32 : update: removing Cheb Bilal - Romantique.mp3
+Jul 14 06:32 : update: removing Elissa - Aaks Elli Shayfenha.mp3
+Jul 14 06:32 : update: removing Drake - Nonstop.mp3
+Jul 14 06:32 : update: removing Drake - Jaded.mp3
+Jul 14 06:32 : update: removing Drake - In My Feelings.mp3
+Jul 14 06:32 : update: removing Shawn Mendes - Señorita.mp3
+Jul 14 06:32 : update: removing Pop Smoke - For The Night.mp3
+Jul 14 06:32 : update: removing Pop Smoke - Mood Swings.mp3
+Jul 14 06:32 : update: removing CHAOS333 - Slowmo.mp3
+Jul 14 06:32 : update: removing Ali S Music - SNOR X KHALED.mp3
+Jul 14 06:32 : update: removing Blanco Palamera - Sola Con Mi Voz.mp3
+Jul 14 06:32 : update: removing Sonu Nigam - Kal Ho Naa Ho (From _Kal Ho Naa Ho_).mp3
+Jul 14 06:32 : update: removing JONY - Love Your Voice.mp3
+Jul 14 06:32 : update: removing The Kid LAROI - STAY.mp3
+Jul 14 06:32 : update: removing Post Malone - White Iverson.mp3
+Jul 14 06:32 : update: removing Yung Lean - Agony.mp3
+Jul 14 06:32 : update: removing Rym - Stylo warqa.mp3
+Jul 14 06:32 : update: removing L'morphine - Sucré Salé.mp3
+Jul 14 06:32 : update: removing T-Pain - T-Pain Mashup (with Kurt Hugo Schneider).mp3
+Jul 14 06:32 : update: removing Mahmoud Al-Turky - Ta3alo Shufou 7aly.mp3
+Jul 14 06:32 : update: removing Diib - Tafi.mp3
+Jul 14 06:32 : update: removing Drake - Take Care.mp3
+Jul 14 06:32 : update: removing Andre Fenrir - Take on Me (The Last of Us Part 2).mp3
+Jul 14 06:32 : update: removing Amr Diab - Tamly Maak.mp3
+Jul 14 06:32 : update: removing Amr Diab - Baateref.mp3
+Jul 14 06:32 : update: removing Los Matadores 2005 - Amor men b3id.mp3
+Jul 14 06:32 : update: removing A$AP Rocky - Praise The Lord (Da Shine) (feat. Skepta).mp3
+Jul 14 06:32 : update: removing Michael Jackson - Billie Jean.mp3
+Jul 14 06:32 : update: removing Michael Jackson - Thriller.mp3
+Jul 14 06:32 : update: removing Dead Can Dance - The Host of Seraphim.mp3
+Jul 14 06:32 : update: removing L'morphine - Tic Tac.mp3
+Jul 14 06:32 : update: removing The Fray - Heartless.mp3
+Jul 14 06:32 : update: removing Anime Kei - Through the Valley (Inspired by _Last of Us 2_).mp3
+Jul 14 06:32 : update: removing Meta4 Planet - Utopia.mp3
+Jul 14 06:32 : update: removing Drake - Toosie Slide.mp3
+Jul 14 06:32 : update: removing Desiigner - Tiimmy Turner.mp3
+Jul 14 06:32 : update: removing Meta4 Planet - 2 Njoum.mp3
+Jul 14 06:32 : update: removing Meta4 Planet - All I Want Is You.mp3
+Jul 14 06:32 : update: removing Inna - UP.mp3
+Jul 14 06:32 : update: removing Diib - Unstable V2.mp3
+Jul 14 06:32 : update: removing Soolking - Ça fait des années.mp3
+Jul 14 06:32 : update: removing L'morphine - Veto.mp3
+Jul 14 06:32 : update: removing Sami Yusuf - Wherever You Are (Arabic Acoustic Version).mp3
+Jul 14 06:32 : update: removing Sami Yusuf - You Came to Me (English).mp3
+Jul 14 06:32 : update: removing Ouled El Bahdja - Wlid El Virage.mp3
+Jul 14 06:32 : update: removing Sami Yusuf - Asma Allah.mp3
+Jul 14 06:32 : update: removing Roffo - Ya Lalali.mp3
+Jul 14 06:32 : update: removing Ouled El Bahdja - Wqate 3ssiba.mp3
+Jul 14 06:32 : update: removing Swae Lee - Won't Be Late.mp3
+Jul 14 06:32 : update: removing Ckye - Fila Me.mp3
+Jul 14 06:32 : update: removing Joji - YEAH RIGHT.mp3
+Jul 14 06:32 : update: removing Roffo - Ya Lalali (Slowed & Reverb).mp3
+Jul 14 06:32 : update: removing Habib Belk - Sandiya.mp3
+Jul 14 06:32 : update: removing Amr Diab - قصاد عيني.mp3
+Jul 14 06:32 : update: removing Yassinos - خسارة فيك غرامي.mp3
+Jul 14 06:32 : update: removing Yassinos - ماتت حبي.mp3
+Jul 14 06:32 : update: removing Yassinos - خليني بحال خوك.mp3
+Jul 14 06:32 : update: removing Yassinos - تدمرت.mp3
+Jul 14 06:32 : update: added /Amine Babylone - Welili.mp3
+Jul 14 06:32 : update: added /Cheb Aarab - Mali aaraftek _ ملي عرفتك.mp3
+Jul 14 06:32 : update: added /Cheb Aarab - Nahwak.mp3
+Jul 14 08:27 : player: played "Cheb Aarab - Mali aaraftek _ ملي عرفتك.mp3"
+Jul 14 19:45 : update: added /Khaled - Les ailes.mp3
+Jul 14 19:45 : update: added /Khaled - Yamina.mp3
+Jul 14 19:45 : update: added /Cheb Mami - Douha alia.mp3
+Jul 14 19:45 : update: added /Khaled - Sahra.mp3
+Jul 14 19:45 : update: added /Rachid Taha - Ya Rayah.mp3
+Jul 14 19:45 : update: added /Cheb Bilal - Di Ayza Kalem.mp3
+Jul 14 19:45 : update: added /Khaled - Sid el juge.mp3
+Jul 14 19:45 : update: added /Cheb Amrou - J'étais tranquille.mp3
+Jul 14 19:45 : update: added /Cheb Hasni - Li binhi ou binha.mp3
+Jul 14 19:45 : update: added /Faudel - Tellement n'brick.mp3
+Jul 14 19:45 : update: added /Cheb Kader - Sid El Houari.mp3
+Jul 14 19:45 : update: added /Abbes - Rouhou Liha Ou Aayouha.mp3
+Jul 14 19:45 : update: added /Cheb Mami - Tzazae.mp3
+Jul 14 19:45 : update: added /Cheba Soraya - litwalfo yakhraj liha badal _ اللي توالفو يخرج ليها بدال.mp3
+Jul 14 19:45 : update: added /Cheb Nasro - N'direk amour.mp3
+Jul 14 19:51 : player: played "Cheb Nasro - N'direk amour.mp3"
+Jul 14 19:57 : player: played "Cheb Aarab - Nahwak.mp3"
+Jul 14 20:03 : player: played "Khaled - Sid el juge.mp3"
+Jul 14 20:09 : player: played "Cheba Soraya - litwalfo yakhraj liha badal _ اللي توالفو يخرج ليها بدال.mp3"
+Jul 14 21:41 : player: played "Khaled - Yamina.mp3"
+Jul 14 22:25 : player: played "Amine Babylone - Welili.mp3"
+Jul 14 23:44 : player: played "Cheb Kader - Sid El Houari.mp3"
+Jul 14 23:49 : player: played "Cheb Aarab - Mali aaraftek _ ملي عرفتك.mp3"
+Jul 14 23:54 : player: played "Cheb Mami - Douha alia.mp3"
+Jul 14 23:59 : player: played "Abbes - Rouhou Liha Ou Aayouha.mp3"
+Jul 15 00:04 : player: played "Khaled - Les ailes.mp3"
+Jul 15 00:08 : player: played "Khaled - Sahra.mp3"
+Jul 15 00:20 : player: played "Cheb Bilal - Di Ayza Kalem.mp3"
+Jul 15 00:24 : player: played "Faudel - Tellement n'brick.mp3"
+Jul 15 00:33 : player: played "Cheb Amrou - J'étais tranquille.mp3"
+Jul 15 06:46 : player: played "Cheb Aarab - Nahwak.mp3"

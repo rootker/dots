@@ -265,7 +265,8 @@ export PS4='| '
 blue=$(tput setaf 4) # \e[36m
 greenbg=$(tput setab 2)
 reset=$(tput sgr0)   # \e[0m
-export PS1="\[$(tput setaf 4)\]\u\[$(tput sgr0)\] -> (\W) \[$(tput setaf 2)\]⦁ \[$(tput sgr0)\]"
+alias pu="ps -fu seo --forest"
+export PS1="\[$(tput setaf 4)\]\u\[$(tput sgr0)\] 🥀 (\W) \[$(tput setaf 2)\]⦁ \[$(tput sgr0)\]"
 #PS1="\[$greenbg\] \w \[$reset\]\[$blue\] * \[$reset\]"
 gatewayip() {
    ip route | awk '/^def/{print $3}'
@@ -549,6 +550,7 @@ alias 'gm'='git commit -m'
 alias 'gp'='git push'
 alias go='git push -u origin $1'
 alias 'm'='mpv -- "$(pwd)/"'
+alias pick="gpick -osp"
 alias 'b'='light -S'
 alias 'bat'='cat /sys/class/power_supply/BAT0/capacity /sys/class/power_supply/BAT0/status'
 alias 'update'='sudo pacman -Syu'
@@ -696,12 +698,7 @@ function backup(){
         fi
 }
 
-PATH="/home/marmathe/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/marmathe/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/marmathe/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/marmathe/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/marmathe/perl5"; export PERL_MM_OPT;
-export socks_proxy=''
+#export socks_proxy=''
 
 # HSTR configuration - add this to ~/.bashrc
 alias hh=hstr                    # hh to be alias for hstr
