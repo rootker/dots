@@ -1,40 +1,36 @@
-# this is my setup 
-> im using arch linux i will add dependish later
-# some infos
+# :palm_tree: screenshot
+# details
+> wm : polybar<br>
+> shell : bash<br>
+> bar : polybar<br>
+> terminal : termite <br>
+> multi task in terminal : tmux<br>
+> browser : firefox
+# easy install way
+- if you have installed `make`
+```bash
+# to install packages in arch linux if your not in arch ignore this one
+make install-packages
 
-i have bashrc with vim keybinds
+# this will copy files and overight files in configs it will do backup if files there exists
+make config
+```
+# manualy install
+### dependish -> `polybar tmux git sxiv mpd ncmpcpp vim zsh bash firefox irssi xclip xsel rsync`
+- after you install dependish
+1. clone this repo `git clone https://github.com/rootker/dots && cd dots`
+- directory hc `hc is link to $HOME/.config/`
+- directory hm `hm is link to $HOME wish it on /home/$USER`
+- note : `it better to use rsync to copy files if a do update to dots u can pull update and use rsync to copy only modified files`
+2. copy whats u want and restart process using `kill -USR1 process-pid`
+# i will add more info about bash config
+IMPORTANT : im using vim keybinds in bash use esc to enter normal mode
 
-> u can press **arrow up** + **arrow down** for history
-> there alot of **alias** read them and use them
-> there a **wall function** for setting random wallpapers using **nitrogen** change default folder in function wall
+> u can press **arrow up** + **arrow down** for history<br>
+> there alot of **alias** read them and use them<br>
+> there a **wall function** for setting random <br>
+wallpapers using **nitrogen** change default folder in function wall
 > 
+# tmux
 
-
-
-
-## Tmux keybinds
-
-tmux is best thing u can learn to use in linux
-- let show some keybinds
-```mermaid
-sequenceDiagram
-C-A ->> Master: Its a master key
-Note right of C-A: when u see master it mean CTRL+A.
-C-A ->> Master: Master+c it created new window
-Note right of C-A: u can later use commend <br>tmux attach, to attach tmux
-C-A ->> Master: Master+d detach send tmux to background
-C-A ->> Master: Master+r reload tmux config
-Note right of C-A: to create split Master+h to horizon Master-v Vertical
-C-A ->> Master: Ctrl+hjkl switch focus window
-Note right of C-A: read config file for more keybinds
-
-```
-
-let show you how to manager files
-```mermaid
-graph LR
-A[tmux-i3-pol*] -- bashrc --> B((home))
-A --> C(.config)
-B --> D{install fonts}
-C --> D
-```
+PREFIX key is contrl+a
