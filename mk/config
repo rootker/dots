@@ -1,3 +1,46 @@
 #!/bin/bash
-rsync -arvAX --delete ../hc/* $HOME/.config/
-rsync -arvAX --delete ../hm/* $HOME/
+list="polybar dunst i3 gtk-3.0 rofi mpd sxiv systemd termite tmux"
+listh=".bashrc .conkyrc .vmrc .zshrc .vim"
+log="on"
+if ! command -v rsync >/dev/null;then
+        echo "You need to install rsync"
+        exit 1
+fi
+for i in $(echo $list | tr ' ' '\n');do
+        if [ $log == "on" ];then
+            if [ -d ~/.config/$i ];then
+                
+                echo -e "[\e[1;34m*\e[0m] rename \e[1;32m~/.config/$i\e[0m to \e[1;31m~/.config/$i.back\e[0m" || echo "somthing wrong"
+                mv -f ~/.config/$i ~/.config/$i.back 2>/dev/null && echo "Dir succefull renamed" || echo "ERROR in $i maybe dir not exits"
+                cp -r ../hc/$i ~/.config/
+            else
+                echo -e "[\e[1;31m!\e[0m] $i dir not exists ignore renaming"
+            fi
+        else
+             if [ -d $i ];then
+                echo "$i dire exits"
+            else
+                echo "$i dire not exits"
+            fi
+        fi
+done
+for i in $(echo $listh | tr ' ' '\n');do
+        if [ $log == "on" ];then
+            if [ -f ~/$i ] || [ -d ~/$i ];then
+                echo -e "[\e[1;34m*\e[0m] rename \e[1;32m~/$i\e[0m to \e[1;31m~/$i.back\e[0m" || echo "somthing wrong"
+                mv -f ~/$i ~/$i.back 2>/dev/null && echo "succefull renamed" || echo "ERROR in $i maybe dir not exits"
+                cp -r ../hm/$i ~/
+            else
+                echo -e "[\e[1;31m!\e[0m] $i dir\file not exists ignore renaming"
+            fi
+        else
+             if [ -d $i ];then
+                echo "$i dire exits"
+            else
+                echo "$i dire not exits"
+            fi
+        fi
+done
+
+#rsync -arvAX --delete ../hc/* $HOME/.config/
+#rsync -arvAX --delete ../hm/* $HOME/
