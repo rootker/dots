@@ -72,6 +72,13 @@ shopt -s histappend      # history from exited shell kept for next open shel
 shopt -s hostcomplete      # host name completion when @ is in the word
 shopt -s nocaseglob      # case-insensitive when performing filename expansion
 
+timed_commands() {
+    [ "$1" = off ] && exec bash
+    PS1='$ '  # Put something simple here
+    while IFS= read -erp "$PS1" line;do
+        eval "time $line"
+    done
+}
 set -o vi # vim mode
 bind -m vi-insert "\C-l":clear-screen # ctrl+l for clear 
 # Better TAB completion.

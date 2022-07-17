@@ -36,17 +36,14 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 # https://consoledonottrack.com/
 export DO_NOT_TRACK=1
 export ADBLOCK="true"
-export LS_COLORS='ow=01;33:no=00:fi=00:di=01;33:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
 # open anyfile end in one of those in vim
 alias -s {yml,yaml,ini,py,php,go,pl}=vim
 # some commmand G string
 #alias -g G='| grep -i'
-setopt interactivecomments # pound sign in interactive prompt
+REPORTTIME=7
 
-REPORTTIME=5
 source ~/.zsh/keybinds
 source ~/.zsh/sudo.plugin.zsh
-xsource ~/.zsh/zsh-syntax-highlighting.zsh
 # PS1 is the prompt
 # secondary prompt, printed when the shell needs more information to complete a
 # command.
@@ -84,71 +81,104 @@ precmd() {
 }
 alias xl="cat $ca | head -1 | xargs -o rm -vi" 
 alias xm="cat $ca | head -1 | xargs -o mv -v ~/Pictures/favs/"
-#alias ...='cd ../../'
-## listing stuff
+alias ...='cd ../../'
+# listing stuff
 #a2# Execute \kbd{ls -lSrah}
 alias dir="command ls -lSrah"
-##a2# Only show dot-directories
+#a2# Only show dot-directories
 alias lad='command ls -d .*(/)'
-##a2# Only show dot-files
+#a2# Only show dot-files
 alias lsa='command ls -a .*(.)'
-##a2# Only files with setgid/setuid/sticky flag
+#a2# Only files with setgid/setuid/sticky flag
 alias lss='command ls -l *(s,S,t)'
-##a2# Only show symlinks
+#a2# Only show symlinks
 alias lsl='command ls -l *(@)'
-##a2# Display only executables
+#a2# Display only executables
 alias lsx='command ls -l *(*)'
-##a2# Display world-{readable,writable,executable} files
+#a2# Display world-{readable,writable,executable} files
 alias lsw='command ls -ld *(R,W,X.^ND/)'
-##a2# Display the ten biggest files
+#a2# Display the ten biggest files
 alias lsbig="command ls -flh *(.OL[1,10])"
-##a2# Only show directories
+#a2# Only show directories
 alias lsd='command ls -d *(/)'
-##a2# Only show empty directories
+#a2# Only show empty directories
 alias lse='command ls -d *(/^F)'
-##a2# Display the ten newest files
+#a2# Display the ten newest files
 alias lsnew="command ls -rtlh *(D.om[1,10])"
-##a2# Display the ten oldest files
+#a2# Display the ten oldest files
 alias lsold="command ls -rtlh *(D.Om[1,10])"
-##a2# Display the ten smallest files
+#a2# Display the ten smallest files
 alias lssmall="command ls -Srl *(.oL[1,10])"
-##a2# Display the ten newest directories and ten newest .directories
+#a2# Display the ten newest directories and ten newest .directories
 alias lsnewdir="command ls -rthdl *(/om[1,10]) .*(D/om[1,10])"
-##a2# Display the ten oldest directories and ten oldest .directories
+#a2# Display the ten oldest directories and ten oldest .directories
 alias lsolddir="command ls -rthdl *(/Om[1,10]) .*(D/Om[1,10])"
-#
-##a2# Remove current empty directory. Execute \kbd{cd ..; rmdir \$OLDCWD}
+
+#a2# Remove current empty directory. Execute \kbd{cd ..; rmdir \$OLDCWD}
 alias rmcdir='cd ..; rmdir $OLDPWD || cd $OLDPWD'
-#
-##a2# ssh with StrictHostKeyChecking=no \\&\quad and UserKnownHostsFile unset
+
+#a2# ssh with StrictHostKeyChecking=no \\&\quad and UserKnownHostsFile unset
 alias insecssh='ssh -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null"'
-##a2# scp with StrictHostKeyChecking=no \\&\quad and UserKnownHostsFile unset
+#a2# scp with StrictHostKeyChecking=no \\&\quad and UserKnownHostsFile unset
 alias insecscp='scp -o "StrictHostKeyChecking=no" -o "UserKnownHostsFile=/dev/null"'
-#
-#alias mwin="mount -t cifs -o username=snake //192.168.1.13/Users /mnt/myshare" 
+
+export LS_COLORS='ow=01;33:no=00:fi=00:di=01;33:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
+export LS_COLORS
+#complete -cf mousepad nano bash sudo pacman
+#source "$HOME/.cache/wal/colors.sh"
+# HSTR configuration - add this to ~/.bashrc
+#alias sydrop="encfs ~/Dropbox/ ~/Private;rsync -azP ~/.config/i3"
+alias mwin="mount -t cifs -o username=snake //192.168.1.13/Users /mnt/myshare" 
+alias ker="cd ~/gits/rootker/"
+alias s='sudo '
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias anakin="sudo pacman -Rns \$(pacman -Qtdq)"
 alias rsync="rsync -arAX --delete "
+#alias sudo='sudo -p "$(printf "\033[1;31mPassword: \033[0;0m" )"'
+alias rel="kill -USR1 -x $1"
+alias bak="mv $2 -vi $2.bak "
 alias quotes='curl -s "https://api.quotable.io/random?maxLength=20|funny" | jq '.content' | cut -d "\"" -f 2'
 alias vbash="vim ~/.bashrc"
 alias ree="redshift -P -O 8500"
+alias load="pgrep -x $1 2>/dev/null | xargs kill -USR1"
 alias vpol="vim ~/.config/polybar/config.ini"
-#alias ranger="python ~/compile/ranger/ranger.py"
+alias ranger="python ~/compile/ranger/ranger.py"
+alias ..="cd ../../"
+alias ...="cd ../../../../".
+alias ...="cd ../../../".
+alias 2="cd ../../"
+alias 3="cd ../../../"
+alias 4="cd ../../../../"
+alias 5="cd ../../../../../"
+alias 6="cd ../../../../../../ "
+alias Mem="free -mh | awk '/^Mem/ {print $3}'"
 alias vi3="vim ~/.config/i3/config"
-#alias psize="expac -S -H M '%k\t%n' "
+alias vpolybar="vim ~/.config/polybar"
+alias rep="pgrep polybar|xargs kill -USR1"
+alias psize="expac -S -H M '%k\t%n' "
 alias upshut="pacman -Syu --noconfirm && shutdown now"
 alias ports="netstat -tulanp"
 alias mountc="mount |column -t"
+alias lsd="ls -ld -- */"
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias pi="curl icanhazip.com"
 alias v="vim"
-#alias ll='ls -lh --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-#alias la='ls -a' 
-#alias grep='grep --color=auto'
-#alias du='du -c -h'
+alias ll='ls -lh --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias la='ls -a' 
+alias grep='grep --color=auto'
+alias more='less'
+alias df='df -h'
+alias du='du -c -h'
 alias mkdir='mkdir -p -v'
 alias ping='ping -c 5'
 alias da='date "+%A, %B %d, %Y [%T]"'
-#alias du1='du --max-depth=1'
+alias du1='du --max-depth=1'
+alias hist='history | grep'
+alias openports='ss --all --numeric --processes --ipv4 --ipv6'
+alias nightly="firefox-nightly"
+alias sf='cls;screenfetch;~/scripts/colors-hex'
+alias cls=' echo -ne "\033c"'
+alias ll="ls -la"
 alias ytdl="youtube-dl -f 'bestvideo[height<=720]+bestaudio/best[height<=720]' --prefer-free-formats"
 alias ytmp3='youtube-dl --extract-audio --audio-format mp3'
 alias screenkey="screenkey -f 'DejaVu Sans Mono Book 22' -p bottom --bg-color '#2f343f' --font-color '#f3f4f5'"
@@ -158,47 +188,74 @@ alias S_="sudo systemctl status"
 alias S-="sudo systemctl stop"
 alias S@="sudo systemctl restart "
 alias S+="sudo systemctl enable"
-alias s="systemctl start --user"
+alias sx="systemctl start --user"
 alias s_="systemctl status --user"
 alias s-="systemctl stop --user"
 alias s@="systemctl restart --user"
 alias s+="systemctl enable --user"
 alias sn='netstat -tanpu'
 alias rl="source ~/.bashrc"
-#alias co="ifconfig tun0 | awk 'NR==2 {print \$2}' | xclip -selection c"
-#alias p5='php56 -S 127.0.0.1:8010 2>/home/marmathe/.marmathe_php_logs & disown'
-#alias xc='xclip -selection clipboard -in'          # cut to clipboard
-#alias vo='xclip -selection clipboard -out'         # paste from clipboard
+alias co="ifconfig tun0 | awk 'NR==2 {print \$2}' | xclip -selection c"
+alias p5='php56 -S 127.0.0.1:8010 2>/home/marmathe/.marmathe_php_logs & disown'
+alias xc='xclip -selection clipboard -in'          # cut to clipboard
+alias vo='xclip -selection clipboard -out'         # paste from clipboard
+alias riwd='sudo systemctl restart iwd'
 alias arserv='aria2c --enable-rpc --rpc-listen-all'
+alias random_wall='ls -d "$PWD/work/wallpapers/MW"/*|uniq|sort -R|head -1|xargs nitrogen --set-zoom-fill|xargs tee ~/wall'
 alias fake1g='fallocate -l 1G test.img'
-#alias whats='apropos'
+alias whats='apropos'
 alias dig='drill'
 alias listaur="pacman -Qm"
-#alias cc='xclip -selection clipboard -in -filter'  # copy clipboard
-#alias userlist="cut -d: -f1 /etc/passwd"
+alias cc='xclip -selection clipboard -in -filter'  # copy clipboard
+alias userlist="cut -d: -f1 /etc/passwd"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias logs="find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
-#alias ls='ls --classify --tabsize=0 --group-directories-first --literal --color=auto --show-control-chars --human-readable'
-alias lswifi="iwctl station wlan0 get-networks"
-#alias 'tmuxhide'='tmux -f ~/.tmux_hidden.conf'
+alias insults='wget http://www.randominsults.net -O - 2>/dev/null | grep \<strong\> | sed "s;^.*<i>\(.*\)</i>.*$;\1;";'
+alias excuses='echo `telnet bofh.jeffballard.us 666 2>/dev/null` |grep --color -o "Your excuse is:.*$"'     # excuses
+alias freechess='telnet fics.freechess.org 5000'                  # connects to a telnet server for free internet chess
+alias funfacts='wget http://www.randomfunfacts.com -O - 2>/dev/null | grep \<strong\> | sed "s;^.*<i>\(.*\)</i>.*$;\1;";'
+alias busy='for i in `seq 0 100`;do timeout 6 dialog --gauge "Install..." 6 40 "$i";done' # pretend to be busy in office to enjoy a cup of coffee
+alias busy2='my_file=$(find /usr/include -type f | sort -R | head -n 1); my_len=$(wc -l $my_file | awk "{print $1}"); let "r = $RANDOM % $my_len" 2>/dev/null; vim +$r $my_file'
+alias busy3='cat /dev/urandom | hexdump -C | highlight ca fe 3d 42 e1 b3 ae f8 | perl -MTime::HiRes -pnE "Time::HiRes::usleep(rand()*1000000)"'
+#alias 'tmux'='wmux -f ~/.dotfiles/tmux/tm.conf'
+alias ls='ls --classify --tabsize=0 --group-directories-first --literal --color=auto --show-control-chars --human-readable'
+#alias 'ls'='exa -a --icons'
+alias 'irssi'='irssi --config ~/.irssi/config --home ~/.irssi/'
+alias 'lswifi'="iwctl station wlan0 get-networks"
+alias 'tmuxhide'='tmux -f ~/.tmux_hidden.conf'
+alias 'wpa_cli'='wpa_cli -iwlan0'
 alias gc="git clone $1"
-alias gs='git status'
-alias ga='git add'
-alias gm='git commit -m'
-alias gp='git push'
+alias 'gs'='git status'
+alias 'ga'='git add'
+alias 'gm'='git commit -m'
+alias 'gp'='git push'
 #alias go='git push -u origin $1'
-#alias 'm'='mpv -- "$(pwd)/"'
+alias 'm'='mpv -- "$(pwd)/"'
 alias pick="gpick -osp"
+alias 'b'='light -S'
 alias 'bat'='cat /sys/class/power_supply/BAT0/capacity /sys/class/power_supply/BAT0/status'
 alias 'update'='sudo pacman -Syu'
-alias add='sudo pacman -S'
-alias del='sudo pacman -Rcns'
+alias 'add'='sudo pacman -S'
+alias 'del'='sudo pacman -Rcns'
 alias ser='pacman -Ss'
-#alias tree='tree -dA'
+alias sb='vim ~/.bashrc'
+alias sf='vim ~/.func'
+alias si3='vim ~/.config/i3/config'
+alias tree='tree -dA'
+alias ..="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
 alias lanip='ip route get 1 | head -1 | cut -d " " -f7'
-## Get the default gateway's (router's) IP address.  See <https://serverfault.com/q/31170>.
-#alias fixwifi="sudo modprobe -r iwlmvm; sudo modprobe iwlmvm"
-alias mv='mv -i'
-alias cp='cp -i'
+# Get the default gateway's (router's) IP address.  See <https://serverfault.com/q/31170>.
+alias anakin="sudo pacman -Rns \$(pacman -Qtdq)"
+alias neofetch="clear; neofetch"
+alias refugees="pacman -Qm"
+alias fixwifi="sudo modprobe -r iwlmvm; sudo modprobe iwlmvm"
+alias yeah="yes"
+alias 'mv'='mv -i'
+alias 'cp'='cp -i'
 #PROMPT=$'\n› '
 # watch for everyone but me and root
 watch=(notme root)
@@ -462,16 +519,13 @@ fi
 
 # 'hash' some often used directories
 #d# start
-hash -d think=~/Dropbox/linux/Thinkpad
-hash -d dt=~/gits/dots/
-hash -d wall=~/gits/walls
-hash -d etc=/etc
-hash -d pac=/var/lib/pacman/
-hash -d linux=/lib/modules/$(command uname -r)
+hash -d deb=/var/cache/apt/archives
+hash -d doc=/usr/share/doc
+hash -d linux=/lib/modules/$(command uname -r)/build/
 hash -d log=/var/log
 hash -d slog=/var/log/syslog
 hash -d src=/usr/src
-hash -d www=/serv/www
+hash -d www=/var/www
 #d# end
 
 # use ip from iproute2 with color support
@@ -880,25 +934,3 @@ cpv() {
     rsync -pogbr -hhh --backup-dir="/tmp/rsync-${USERNAME}" -e /dev/null --progress "$@"
 }
 compdef _files cpv
-tgo() {
-    tmp="$(mktemp -p /tmp -d "tgo_$(date +%Y%m%d)_XXXXXXXX")"
-    printf 'package main\n\nfunc main() {\n\n}\n' > "$tmp/main.go"
-    printf 'package main\n\nfunc TestMain(t *testing.T) {\n\n}\n\n' > "$tmp/main_test.go"
-    printf 'func BenchmarkMain(b *testing.B) {\n\tb.ReportAllocs()\n\tfor n := 0; n < b.N; n++ {\n\t}\n}\n' >> "$tmp/main_test.go"
-
-    printf 'module %s\n' "$(basename "$tmp")" > "$tmp/go.mod"
-    (
-        cd "$tmp"
-        vim -p main.go main_test.go
-        echo "$tmp"
-    )
-}
-insert_doas() { zle beginning-of-line; zle -U "pacman " }
-replace_rm()  { zle beginning-of-line; zle delete-word; zle -U "rm " }
-
-zle -N insert-doas insert_doas
-zle -N replace-rm replace_rm
-
-bindkey '^p'    insert-doas
-bindkey '^r'    replace-rm
-
