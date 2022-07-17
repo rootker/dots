@@ -100,15 +100,14 @@ Plug 'preservim/vim-markdown'
 Plug 'chikamichi/mediawiki.vim'
 
 Plug 'flazz/vim-colorschemes'
-
+Plug 'MattesGroeger/vim-bookmarks'
 "Plug 'https://github.com/nathanaelkane/vim-indent-guides'
 
 Plug 'https://github.com/machakann/vim-highlightedyank'
 
 Plug 'https://github.com/junegunn/goyo.vim'
-
+Plug 'bluz71/vim-mistfly-statusline'
 Plug 'diepm/vim-rest-console'
-
 Plug 'scrooloose/nerdtree'
 
 Plug 'https://github.com/hashivim/vim-terraform.git'
@@ -133,8 +132,12 @@ colorscheme jelleybeans
 set background=dark
 "not sure if this is needed or not, or even if it works. Might just be default
 "iunno lol
-set statusline=%F[%L][%{&ff}]%y[%04l,%04v]
-
+set noshowmode  " to get rid of thing like --INSERT--
+set noshowcmd  " to get rid of display of last command
+set shortmess+=F  " to get rid of the file name displayed in the command line bar
+set laststatus=2
+"set statusline=\ %f%m%r%h%w\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
+"set statusline=%F[%L][%{&ff}]%y[%04l,%04v]
 
 "hide the options in gvim
 set guioptions=aci
@@ -197,3 +200,15 @@ endfunction
 
 noremap <silent> <c-s-j> :call <SID>swap_up()<CR>
 noremap <silent> <c-s-k> :call <SID>swap_down()<CR>
+nmap <Leader><Leader> <Plug>BookmarkToggle
+nmap <Leader>i <Plug>BookmarkAnnotate
+nmap <Leader>a <Plug>BookmarkShowAll
+nmap <Leader>j <Plug>BookmarkNext
+nmap <Leader>k <Plug>BookmarkPrev
+nmap <Leader>x <Plug>BookmarkClearAll
+hi StatusLine ctermbg=black ctermfg=white
+highlight BookmarkSign ctermbg=NONE ctermfg=160
+highlight BookmarkLine ctermbg=black ctermfg=NONE
+highlight BookmarkAnnotationLine ctermbg=black ctermfg=NONE
+let g:bookmark_highlight_lines = 1
+let g:bookmark_sign = '🐱'

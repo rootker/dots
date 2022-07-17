@@ -5,6 +5,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id termite 
 font pango:monospace 8
 set $i3lx "/home/moux/.local/bin/i3l"
+set $in --no-startup-id
 
 client.focused          #262626 #262626 #ffffff #dddddd   #262626
 client.focused_inactive #262626 #262626 #86888c #292d2e   #262626 
@@ -42,8 +43,8 @@ bindsym $mod+Control+6 exec mpv $HOME/.local/share/sounds/beep-timber.aif && pki
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 # screenshots
-bindsym $mod+Control+3 exec maim -u ~/Pictures/Screenshots/$(date +%s).png | xclip -selection clipboard -t image/png && notify-send "Screenshot captured"
-bindsym $mod+Control+4 exec --no-startup-id maim -s -u ~/Pictures/Screenshots/$(date +%s).png | xclip -selection clipboard -t image/png && notify-send "Screenshot captured"
+bindsym $mod+Control+3 exec maim -u ~/Pictures/scn/$(date +%s).png | xclip -selection clipboard -t image/png && notify-send "Screenshot captured"
+bindsym $mod+Control+4 exec --no-startup-id maim -s -u ~/Pictures/scn/$(date +%s).png | xclip -selection clipboard -t image/png && notify-send "Screenshot captured"
 
 # kill focused window
 bindsym $mod+Shift+q kill 
@@ -179,6 +180,21 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
+mode "apps" {
+    bindsym b exec $in firefox 
+    bindsym t exec $in termite 
+    bindsym m exec $in termite -e "ncmpcpp"
+    bindsym c exec $in code-oss
+    bindsym v exec $in ~/tmp/obsidian
+    bindsym p exec $in spotify
+    bindsym l exec $in chromium
+    # back to normal mode after u execute keybind
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+# keymap for mode
+bindsym $mod+n mode "apps"
+
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
 
@@ -261,7 +277,7 @@ exec --no-startup-id xautolock -corners 000- -time 5 -locker "dm-tool lock"
 exec --no-startup-id nitrogen --restore 
 exec --no-startup-id setxkbmap es
 #exec --no-startup-id polybar example
-exec --no-startup-id picom -c --corner-radius 5  --experimental-backends 
+exec_always --no-startup-id picom -c --corner-radius 5  --experimental-backends 
 #exec --no-startup-id compton --config ~/.config/picom.conf
 #exec --no-startup-id redshift -x && redshift -O 4000k
 #exec --no-startup-id DRI_PRIME=1 picom 

@@ -9,6 +9,7 @@ alert = ${xrdb:color1:#222}
 
 
 [bar/example]
+monitor = HDMI-1
 enable-ipc = true
 tray-position = none
 width = 100%

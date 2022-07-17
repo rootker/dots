@@ -5,29 +5,30 @@
 # ░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 # ░░░░░░░░░░
 #     
-export PATH=$HOME/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.orw/scripts/:$HOME/go/bin:$HOME/bin/new:$HOME/.node_modules/bin/:/home/moux/.local/share/gem/ruby/3.0.0/bin::$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$HOME/go/bin:$HOME/.node_modules/bin/:/home/$USER/.local/share/gem/ruby/3.0.0/bin:$PATH
 #export CDPATH='~:/var/log:/etc'
-export RANGER_LOAD_DEFAULT_RC=FALSE
-export WORKON_HOME=$HOME/Code/
 export VISUAL=vim
-export anime=$HOME/Pictures/anime/
-#export TERMINAL=termite
+export EDITOR=vim
+export TERMINAL=termite
 export READER=zathura
 #export LANG=utf8
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-export EDITOR=vim
 export RTV_BROWSER=w3m
 export BROWSER=$([ '$(pidof firefox)' = "" ] && export BROWSER=google-chrome-stable || export BROWSER=firefox)
-#export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME=$HOME/.cache/
+export XDG_CONFIG_HOME=$HOME
+#export XDG_RUNTIME_DIR=~
+#export XDG_DATA_DIRS=~
+#export XDG_CONFIG_DIRS=~
+export XDG_CONFIG_HOME="$HOME/.config"
 #export MSF_DATABASE_CONFIG="$HOME/.msf4/database.yml"
-export _JAVA_AWT_WM_NONREPARENTING=1
 export RUBYOPT="rubygems"
 export npm_config_prefix=$HOME/.node_modules
-#export CFLAGS="-O3 -pipe -march=native"
-#export CXXFLAGS="-O3 -pipe -march=native"
-#export MAKEFLAGS="-j4"
+export CFLAGS="-O3 -pipe -march=native"
+export CXXFLAGS="-O3 -pipe -march=native"
+export MAKEFLAGS="-j4"
 export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
-#export WGETRC="$HOME/.config/wget/wgetrc"
+export WGETRC="$HOME/.config/wget/wgetrc"
 export HSTR_CONFIG=hicolor       # get more colors
 export MYHISTFILE=~/.bash_myhistory
 export HISTCONTROL=ignoreboth:erasedups
@@ -37,8 +38,7 @@ export HISTFILESIZE=50000
 shopt -s histappend              # append new history items to .bash_history
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 export 'FZF_DEFAULT_COMMAND'="find . -path '*/\.*' -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//"
-export SUDO_ASKPASS="rofi-askpass"
-#source "$HOME/bin/pass.bash-completion"
+#export SUDO_ASKPASS="rofi-askpass"
 export FFF_COL1=1
 export FFF_OPENER="opn"
 export FFF_W3M_XOFFSET=30
@@ -49,8 +49,6 @@ export FFF_FAV3=~/Pictures
 export FFF_FAV4=~/Programs
 export FFF_FAV5=~/Videos
 export FFF_FAV6=/mnt/
-export config=~/.config
-export themes=~/.themes
 export LESS_TERMCAP_mb=$'\e[0;33m'
 export LESS_TERMCAP_md=$'\e[0;36m'
 export LESS_TERMCAP_me=$'\e[0m'
@@ -61,22 +59,6 @@ export LESS_TERMCAP_us=$'\e[0;31m'
 # https://consoledonottrack.com/
 export DO_NOT_TRACK=1
 export ADBLOCK="true"
-#export XDG_CACHE_HOME=~
-#export XDG_CONFIG_HOME=~
-#export XDG_DATA_HOME=~
-#export XDG_RUNTIME_DIR=~
-#export XDG_DATA_DIRS=~
-#export XDG_CONFIG_DIRS=~
-## if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
-# Enable filtering.
-_mpv_use_media_globexpr=1
-
-# Override the default media glob expression.
-# Display the default value using `echo $_mpv_media_globexpr`.
-_mpv_media_globexpr='@(mp4)'
-#if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
-# if this is interactive shell, then bind 'kill last command' to Ctrl-x k
-#if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
 
 stty -ixon
 shopt -s autocd         # automatically cd's to path entered at the prompt
@@ -90,17 +72,11 @@ shopt -s histappend      # history from exited shell kept for next open shel
 shopt -s hostcomplete      # host name completion when @ is in the word
 shopt -s nocaseglob      # case-insensitive when performing filename expansion
 
-#set -o vi # Enable Vim Mode in Bash
-set -o vi
-bind -m vi-insert "\C-l":clear-screen
-#bind -m vi-insert "\C-l":clear-screen # Control+L for clear-screen
+set -o vi # vim mode
+bind -m vi-insert "\C-l":clear-screen # ctrl+l for clear 
 # Better TAB completion.
-#bind 'set show-all-if-ambiguous on'
-set show-all-if-ambiguous on
 bind 'TAB:menu-complete'
-#bind 'TAB: menu-complete'
 bind 'set colored-stats on'
-#bind 'set completion-display-width 1'
 bind 'set show-all-if-ambiguous on'
 bind 'set completion-ignore-case on'
 complete -W "+%H:%M +%d.%m.%y_%H:%M" date
@@ -666,44 +642,10 @@ function cpstat()
     done
     echo
 }
-function backup(){ 
-        folder="$HOME/Dropbox/linux/configs"
-        if ! command -v /bin/rsync 1>/dev/null;then
-            echo "command not found rsync"
-        else
-            echo -e "[+] Copying bashrc to Dropbox"
-            sleep 1
-            rsync -arvAX --delete --exclude-from="$HOME/.list" ~/bin ~/Dropbox/linux/
-            sleep 1
-            rsync -arAX --delete ~/.bashrc $folder
-            echo -e "[+] Copying Polybar to Dropbox"
-            sleep 1
-            rsync -arAX --delete ~/.config/polybar $folder
-            echo -e "[+] Copying i3 to dropbox"
-            sleep 1
-            rsync -arAX --delete ~/.config/i3 $folder
-            echo -e "[+] Copying vimrc to dropbox"
-            sleep 1
-            rsync -arAX --delete ~/.vimrc $folder
-            echo -e "[+] Copying systemd to dropbox"
-            sleep 1
-            rsync -arAX --delete ~/.config/systemd $folder
-            echo -e "[+] Copying mpd to dropbox"
-            sleep 1
-            rsync -arAX --delete ~/.config/mpd $folder
-            echo -e "[+] copying picom.conf"
-            sleep 1
-            rsync -arAX --delete ~/.config/picom.conf $folder
-             
-        fi
-}
-
 #export socks_proxy=''
 
 # HSTR configuration - add this to ~/.bashrc
 alias hh=hstr                    # hh to be alias for hstr
-alias v="f -e vim"
-alias m="m -e mpv"
 alias reload="source ~/.bashrc"
 export HSTR_CONFIG=hicolor       # get more colors
 shopt -s histappend              # append new history items to .bash_history
