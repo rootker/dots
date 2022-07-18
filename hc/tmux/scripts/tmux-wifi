@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 WIFI_NAME=$(iwgetid -r)
+ON_ICON=" "
 OFF_ICON=" "
 TAIL="#[fg=colour237] ⦁ "
 

@@ -38,52 +38,96 @@ export DO_NOT_TRACK=1
 export ADBLOCK="true"
 export LS_COLORS='ow=01;33:no=00:fi=00:di=01;33:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:'
 # open anyfile end in one of those in vim
+setopt auto_cd                   # command is the name of a directory, perform the cd command to that directory.
 alias -s {yml,yaml,ini,py,php,go,pl}=vim
 # some commmand G string
 #alias -g G='| grep -i'
-setopt interactivecomments # pound sign in interactive prompt
 
-REPORTTIME=5
+##############################################################
+#  History options
+###############################################################
+
+autoload -Uz bracketed-paste-url-magic && zle -N bracketed-paste bracketed-paste-url-magic
+autoload -Uz url-quote-magic && zle -N self-insert url-quote-magic
+setopt AUTO_RESUME          # Treat single word simple commands without redirection as candidates for resumption of an existing job.
+setopt INTERACTIVE_COMMENTS # Allow comments starting with `#` even in interactive shells.
+setopt NO_FLOW_CONTROL      # disable start (C-s) and stop (C-q) characters
+setopt CORRECT              # Suggest command corrections
+setopt LONG_LIST_JOBS       # List jobs in the long format by default.
+setopt NOTIFY               # Report the status of background jobs immediately, rather than waiting until just before printing a prompt.
+setopt NO_BG_NICE           # Prevent runing all background jobs at a lower priority.
+setopt NO_CHECK_JOBS        # Prevent reporting the status of background and suspended jobs before exiting a shell with job control. NO_CHECK_JOBS is best used only in combination with NO_HUP, else such jobs will be killed automatically.
+setopt NO_HUP               # Prevent sending the HUP signal to running jobs when the shell exits.
+setopt NO_BEEP              # Don't beep on erros (overrides /etc/zshrc in Catalina)
+
+HISTORY_IGNORE='(clear|c|pwd|exit|* —help|[bf]g *|less *|cd ..|cd -)'
+setopt interactivecomments       # pound sign in interactive prompt
+setopt BANG_HIST                 # Perform textual history expansion, csh-style, treating the character ‘!’ specially.
+setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
+setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
+setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
+setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks from each command line being added to the history list.
+setopt APPEND_HISTORY            # append to history file
+setopt HIST_NO_STORE             # Don't store history commands
+
+# in order to use #, ~ and ^ for filename generation grep word
+# *~(*.gz|*.bz|*.bz2|*.zip|*.Z) -> searches for word not in compressed files
+# don't forget to quote '^', '~' and '#'!
+setopt extended_glob             # display PID when suspending processes as well
+setopt longlistjobs              # report the status of backgrounds jobs immediately
+setopt notify                    # whenever a command completion is attempted, make sure the entire command path
+setopt hash_list_all             # is hashed first.
+setopt completeinword            # not just at the end
+setopt noglobdots                # * shouldn't match dotfiles. ever.
+setopt noshwordsplit             # use zsh style word splitting
+setopt unset                     # don't error out when unset parameters are used
+setopt EXTENDED_GLOB             # Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation, etc. (An initial unquoted ‘~’ always produces named directory expansion.)
+setopt MULTIOS                   # Perform implicit tees or cats when multiple redirections are attempted.
+setopt NO_CLOBBER                # Disallow ‘>’ redirection to overwrite existing files. ‘>|’ or ‘>!’ must be used to overwrite a file.
+
+setopt AUTO_PUSHD        # Make cd push the old directory onto the directory stack.
+setopt PUSHD_IGNORE_DUPS # Don’t push multiple copies of the same directory onto the directory stack.
+setopt PUSHD_SILENT      # Do not print the directory stack after pushd or popd.
+setopt PUSHD_TO_HOME     # Have pushd with no arguments act like ‘pushd ${HOME}’.
+setopt AUTOPARAMSLASH    # tab completing directory appends a slash
+bindkey ' ' magic-space
+
+REPORTTIME=5                     # if process last more then 5 print usage
 source ~/.zsh/keybinds
-source ~/.zsh/sudo.plugin.zsh
-xsource ~/.zsh/zsh-syntax-highlighting.zsh
-# PS1 is the prompt
-# secondary prompt, printed when the shell needs more information to complete a
+source /home/seo/.zsh/func.zsh
+source /home/seo/.zsh/plugins/.abbr_pwd
+source /home/seo/.zsh/plugins/alias-tips.plugin.zsh
+#source ~/.zsh/sudo.plugin.zsh
+xsource ~/.zsh/plugins/zsh-syntax-highlighting.zsh # if file exits then source it
 # command.
-PS2='\`%_> '
-# selection prompt used within a select loop.
-PS3='?# '
-# the execution trace prompt (setopt xtrace). default: '+%N:%i>'
-PS4='+%N:%i:%_> '
+PS2='\`%_> '                     # secondary prompt, printed when the shell needs more information to complete a
+PS3='?# '                        # selection prompt used within a select loop.
+PS4='+%N:%i:%_> '                # the execution trace prompt (setopt xtrace). default: '+%N:%i>'
 
 preexec() {
     preexec_called=1
 }
-function check_last_exit_code() {
-  local LAST_EXIT_CODE=$?
-  if [[ $LAST_EXIT_CODE -ne 0 ]]; then
-    local EXIT_CODE_PROMPT=' '
-    EXIT_CODE_PROMPT+="%{$fg[red]%}-%{$reset_color%}"
-    EXIT_CODE_PROMPT+="%{$fg_bold[red]%}$LAST_EXIT_CODE%{$reset_color%}"
-    EXIT_CODE_PROMPT+="%{$fg[red]%}-%{$reset_color%}"
-    echo "$EXIT_CODE_PROMPT"
-  fi
-}
 precmd() {
     if [ "$?" != 0 ] && [ "$preexec_called" = 1 ]; then
         unset preexec_called
-        export PS1="%F{blue}%n%f 🥀 (%/) %F{red}⦁%f "
+#        export PS1="%F{blue}%n%f 🥀 (%/) %F{red}⦁%f "
+        export PS1="%F{blue}%n%f 🥀 ($(felix_pwd_abbr)) %F{red}⦁%f "
         #RPROMPT='%F{red}%(?..[%?] )✘%f'
         RPROMPT='%F{red}✘%f'
     else
 
-        export PS1="%F{blue}%n%f 🥀 (%/) %F{green}⦁%f "
+        export PS1="%F{blue}%n%f 🥀 ($(felix_pwd_abbr)) %F{green}⦁%f "
 #        PROMPT='%B%F{blue}%1~%f%b%F{blue} > %F{black}'
         RPROMPT=''
     fi
 }
-alias xl="cat $ca | head -1 | xargs -o rm -vi" 
-alias xm="cat $ca | head -1 | xargs -o mv -v ~/Pictures/favs/"
 #alias ...='cd ../../'
 ## listing stuff
 #a2# Execute \kbd{ls -lSrah}
@@ -199,6 +243,7 @@ alias lanip='ip route get 1 | head -1 | cut -d " " -f7'
 #alias fixwifi="sudo modprobe -r iwlmvm; sudo modprobe iwlmvm"
 alias mv='mv -i'
 alias cp='cp -i'
+alias reload="source ~/.zshrc"
 #PROMPT=$'\n› '
 # watch for everyone but me and root
 watch=(notme root)
@@ -206,47 +251,7 @@ watch=(notme root)
 typeset -U path PATH cdpath CDPATH fpath FPATH manpath MANPATH
 # auto complete zsh
 autoload -U compinit; compinit
-# because it's required for share_history.
-setopt share_history
-setopt append_history
-# save each command's beginning timestamp and the duration to the history file
-setopt extended_history
-# remove command lines from the history list when the first character on the
-# line is a space
-setopt histignorespace
-# if a command is issued that can't be executed as a normal command, and the
-# command is the name of a directory, perform the cd command to that directory.
-setopt auto_cd
-# in order to use #, ~ and ^ for filename generation grep word
-# *~(*.gz|*.bz|*.bz2|*.zip|*.Z) -> searches for word not in compressed files
-# don't forget to quote '^', '~' and '#'!
-setopt extended_glob
-# display PID when suspending processes as well
-setopt longlistjobs
-# report the status of backgrounds jobs immediately
-setopt notify
-# whenever a command completion is attempted, make sure the entire command path
-# is hashed first.
-setopt hash_list_all
-# not just at the end
-setopt completeinword
-# Don't send SIGHUP to background processes when the shell exits.
-setopt nohup
-# make cd push the old directory onto the directory stack.
-setopt auto_pushd
-# avoid "beep"ing
-setopt nobeep
-# don't push the same dir twice.
-setopt pushd_ignore_dups
-# * shouldn't match dotfiles. ever.
-setopt noglobdots
-# use zsh style word splitting
-setopt noshwordsplit
-# don't error out when unset parameters are used
-setopt unset
 
-# My alias
-alias reload="source ~/.zshrc"
 
 # setting some default values
 typeset -ga ls_options
@@ -869,6 +874,8 @@ function wall() {
       /bin/ls -Rt -d -1 ${dir:-$default}/* | egrep '.jpg$|\.png$|\.jpeg$|.webmp' | shuf | head -1|xargs nitrogen --set-zoom-fill --save
     return 0
     fi
+alias xl="cat $ca | head -1 | xargs -o rm -vi" 
+alias xm="cat $ca | head -1 | xargs -o mv -v ~/Pictures/favs/"
 }
 
 log_history() {
@@ -893,12 +900,12 @@ tgo() {
         echo "$tmp"
     )
 }
-insert_doas() { zle beginning-of-line; zle -U "pacman " }
-replace_rm()  { zle beginning-of-line; zle delete-word; zle -U "rm " }
+insert_pacman() { zle beginning-of-line; zle -U "pacman " }
+#replace_rm()  { zle beginning-of-line; zle delete-word; zle -U "rm " }
 
 zle -N insert-doas insert_doas
-zle -N replace-rm replace_rm
+#zle -N replace-rm replace_rm
 
-bindkey '^p'    insert-doas
-bindkey '^r'    replace-rm
-
+bindkey '^p'    insert-pacman
+#bindkey '^r'    replace-rm
+eval "$(jump shell zsh)"
