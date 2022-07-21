@@ -2,7 +2,7 @@
 while read file
 do
         case "$1" in
-        "w") nitrogen --save --set-zoom-fill "$file" & ;;
+        "w") nitrogen --save --set-zoom-fill --head=0 "$file" && nitrogen --save --set-zoom-fill --head=1 "$file" & ;;
 ############################ ------------- ######################
         "c")
         [ -z "$destdir" ] && destdir="$(sed "s/\s.*#.*$//;/^\s*$/d" ${XDG_CONFIG_HOME:-$HOME/.config}/bm-dirs | awk '{print $2}' | dmenu -l 20 -i -p "Copy file(s) to where?" | sed "s|~|$HOME|g")"

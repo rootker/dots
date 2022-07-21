@@ -182,7 +182,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # resize window (you can also use the mouse for that)
 mode "apps" {
     bindsym b exec $in firefox 
-    bindsym t exec $in termite 
+    bindsym t exec $in pavucontrol 
     bindsym m exec $in termite -e "ncmpcpp"
     bindsym c exec $in code-oss
     bindsym v exec $in ~/tmp/obsidian

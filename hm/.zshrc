@@ -7,6 +7,7 @@ export XDG_CONFIG_HOME=$HOME
 #export XDG_RUNTIME_DIR=~
 #export XDG_DATA_DIRS=~
 #export XDG_CONFIG_DIRS=~
+#export EDITOR=${EDITOR:-vim}
 export XDG_CONFIG_HOME="$HOME/.config"
 export FFF_COL1=1
 export FFF_OPENER="opn"
@@ -100,10 +101,28 @@ setopt AUTOPARAMSLASH    # tab completing directory appends a slash
 bindkey ' ' magic-space
 
 REPORTTIME=5                     # if process last more then 5 print usage
+#plugins=(alias-tips.plugin zsh-syntax-highlighting)
+
+#plugins=(web-search sudo .abbr_pwd)
+#function source_plugins() {
+#plug_dir="$HOME/.zsh/plugins/"
+#for i in ${plugins[@]};do
+#        pa="$plug_dir$i.plugin.zsh"
+#        pa+="$plug_dir$i.zsh"
+#        pax="$plug_dir$i"
+#        if [[ -f $pa ]];then
+#        source $pa
+#        fi
+#        if [[ -f $pax ]];then
+#        source $pax
+#        fi
+#done
+#}
+#source_plugins
 source ~/.zsh/keybinds
 source /home/seo/.zsh/func.zsh
 source /home/seo/.zsh/plugins/.abbr_pwd
-source /home/seo/.zsh/plugins/alias-tips.plugin.zsh
+#source /home/seo/.zsh/plugins/alias-tips.plugin.zsh
 #source ~/.zsh/sudo.plugin.zsh
 xsource ~/.zsh/plugins/zsh-syntax-highlighting.zsh # if file exits then source it
 # command.

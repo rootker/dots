@@ -95,6 +95,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'godlygeek/tabular'
 " Plug 'neoclide/coc.nvim'
 
+Plug 'ycm-core/YouCompleteMe'
 Plug 'preservim/vim-markdown'
 
 Plug 'chikamichi/mediawiki.vim'
@@ -102,9 +103,9 @@ Plug 'chikamichi/mediawiki.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'MattesGroeger/vim-bookmarks'
 "Plug 'https://github.com/nathanaelkane/vim-indent-guides'
-
+Plug 'ryanoasis/vim-devicons'
 Plug 'https://github.com/machakann/vim-highlightedyank'
-
+Plug 'preservim/nerdtree'
 Plug 'https://github.com/junegunn/goyo.vim'
 Plug 'bluz71/vim-mistfly-statusline'
 Plug 'diepm/vim-rest-console'
@@ -197,7 +198,13 @@ function! s:swap_down()
     call s:swap_lines(n, n + 1)
     exec n + 1
 endfunction
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+let g:ycm_use_clangd = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+set completeopt=menu
 
+let g_ycm_key_list_select_completion=[]
+let g_ycm_key_list_previous_completion=[]
 noremap <silent> <c-s-j> :call <SID>swap_up()<CR>
 noremap <silent> <c-s-k> :call <SID>swap_down()<CR>
 nmap <Leader><Leader> <Plug>BookmarkToggle
@@ -212,3 +219,9 @@ highlight BookmarkLine ctermbg=black ctermfg=NONE
 highlight BookmarkAnnotationLine ctermbg=black ctermfg=NONE
 let g:bookmark_highlight_lines = 1
 let g:bookmark_sign = '🐱'
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+map <F9> :YcmCompleter FixIt<CR>
+

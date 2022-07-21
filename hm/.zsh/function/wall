@@ -1,0 +1,74 @@
+    lastdir="/home/$USER/.cache/Wall/"
+    ca="$lastdir/.lastpath"
+    default="/home/$USER/gits/wallpapers/MW"
+    animewl="$HOME/Pictures/anime"
+    #touch $ca
+    if [[ "$1" == "-l" ]];then
+        if ! -d $lastdir;then
+            mkdir $lastdir
+        else
+            echo "Cannot Create Dir $?"
+        fi
+        read -p "ENTER PATH _> " path
+        if ! -d $path;then
+           echo "Dir Not Exits"
+           exit
+       else
+           echo $path > $cachefile
+        fi
+    fi
+   if [[ "$1" == "-r" ]];then
+    if [[ "$2" == "del" ]];then
+        cat $ca | head -1 | xargs -o rm -vi 
+        return 1
+    fi 
+	if [[ "$2" == "anime" ]];then
+        imagename=$(/bin/ls -Rt -d -1 $animewl/* | egrep '.jpg$|\.png$|\.jpeg$|.webmp' | shuf | head -1)
+        nitrogen --set-zoom-fill $imagename --save 2>/dev/null|| echo "somthing wrong" 
+        echo "[+] Wallpaper Have Been Set Succefull..."
+        echo "[!] Wallpaper Path : $imagename" 
+        echo $imagename >> $ca
+        return 0
+	fi
+    if [[ -d "$defualt" ]];then
+        echo "Directory Not Found"
+        return 1
+    fi
+    if [[ -z $2 ]];then
+        def="/home/$USER/gits/walls/"
+        imagename=$(find ${def}* -type f | egrep '.jpg$|\.png$|\.jpeg$|.webmp' | shuf | head -1)
+        nitrogen --set-zoom-fill $imagename --save 2>/dev/null|| echo "somthing wrong" 
+        echo "[+] Wallpaper Have Been Set Succefull..."
+        echo "[!] Wallpaper Path : $imagename"
+        echo $imagename > $ca
+        return 0
+    fi
+        #/bin/ls -Rt -d -1 $default/{*,.*} | egrep '.jpg$|\.png$|\.jpeg$|.webmp' | shufb81f369cccadd5ab17f81a8ab3daeb44de6 | head -1|xargs nitrogen --set-tiled 2>/dev/null
+        imagename=$(/bin/ls -Rt -d -1 $2/* | egrep '.jpg$|\.png$|\.jpeg$|.webmp' | shuf | head -1)
+        nitrogen --set-zoom-fill $imagename --save 2>/dev/null|| echo "somthing wrong" 
+        echo "[+] Wallpaper Have Been Set Succefull..."
+        echo "[!] Wallpaper Path : $imagename"
+        echo $imagename > $ca
+        return 0
+       if [ $? != 0 ];then
+            echo "There Unkown Error $#"
+   fi
+    fi
+    if [[ ! -z $1 ]];then
+        dir=$(pwd)
+        find $1 -type f |  egrep '.jpg$|\.png$|\.jpeg$|.webmp' | shuf | head -1 > $ca 
+        cat $ca | xargs nitrogen --set-zoom-fill --save 
+        echo "[!] wallpaper is $(cat $ca)" 
+    return 0
+    fi
+  read -p "Enter Directory Name : " dir
+    if [[ "${dir:-$default}" == "" ]];then
+        echo "U have to Enter Dir"
+    elif [[ $# != 0 ]];then
+        echo "There Unkown Error"
+    else
+      /bin/ls -Rt -d -1 ${dir:-$default}/* | egrep '.jpg$|\.png$|\.jpeg$|.webmp' | shuf | head -1|xargs nitrogen --set-zoom-fill --save
+    return 0
+    fi
+alias xl="cat $ca | head -1 | xargs -o rm -vi" 
+alias xm="cat $ca | head -1 | xargs -o mv -v ~/Pictures/favs/"
