@@ -180,6 +180,9 @@ alias lsnewdir="command ls -rthdl *(/om[1,10]) .*(D/om[1,10])"
 ##a2# Display the ten oldest directories and ten oldest .directories
 alias lsolddir="command ls -rthdl *(/Om[1,10]) .*(D/Om[1,10])"
 #
+function slog() {
+journalctl --user -u $1 -b 0 --no-pager
+}
 ##a2# Remove current empty directory. Execute \kbd{cd ..; rmdir \$OLDCWD}
 alias rmcdir='cd ..; rmdir $OLDPWD || cd $OLDPWD'
 #
